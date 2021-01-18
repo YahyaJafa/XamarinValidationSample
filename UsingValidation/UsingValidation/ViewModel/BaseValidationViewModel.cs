@@ -10,7 +10,7 @@ namespace UsingValidation.ViewModel
 {
     /// <summary>
     /// A standard implementation of INotifyDataErrorInfo.
-    /// This class and example are based on Ed Snider book "Mastering Xamarin Forms.., 3rd"
+    /// This class and example are based on Ed Snider book "Mastering Xamarin Forms.., 3rd", Website:
     /// https://hub.packtpub.com/how-to-implement-data-validation-with-xamarin-forms/
     /// </summary>
     public class BaseValidationViewModel : BaseViewModel, INotifyDataErrorInfo
