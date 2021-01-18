@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsingValidation.Views.EntryPage"
+             Title="New Entry">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" Command="{Binding SaveCommand}"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <TableView Intent="Form">
+            <TableView.Root>
+                <TableSection>
+                    <EntryCell x:Name="title" Label="Title" Text="{Binding Title}"/>
+                    <EntryCell Label="Date" Text="{Binding Date, StringFormat='{0:d}'}"/>
+                    <EntryCell x:Name="rating" Label="Rating" Keyboard="Numeric" Text="{Binding Rating}"/>
+                    <EntryCell Label="Notes" Text="{Binding Notes}"/>
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>
