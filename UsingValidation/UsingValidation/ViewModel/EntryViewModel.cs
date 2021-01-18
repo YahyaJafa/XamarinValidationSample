@@ -18,10 +18,10 @@ namespace UsingValidation.ViewModel
                 if (_Title == value) return;
                 _Title = value;
                 
-                // Lambda expression:
+                // Anonymous method:
                 //Validate(() => !string.IsNullOrWhiteSpace(_Title), "Title must be provided");
 
-                //the same as method expression:
+                //the same as defining outer method:
                 Validate(NotEmptyTitle, "Title must be provided");
 
                 OnPropertyChanged();
@@ -74,7 +74,6 @@ namespace UsingValidation.ViewModel
             EntryModel entry = new EntryModel
             {
                 Title = Title
-
             };
         }
     }
